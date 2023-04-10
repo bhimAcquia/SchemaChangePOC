@@ -10,7 +10,7 @@ pipeline {
         stage('Run schemachange') {
             steps {
                 sh "pip install schemachange --upgrade"
-                sh "snowchange deploy --include common,tenants/tenant_803"
+                sh "snowchange deploy --include common,tenants/tenant_803 -config-folder snowflake"
             }
         }
     }
