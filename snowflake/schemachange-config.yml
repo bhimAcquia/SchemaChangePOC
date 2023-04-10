@@ -22,7 +22,7 @@ snowflake-warehouse: 'A1SF_WH_INTERNAL_ETL_SMALL'
 snowflake-database: 'A1SF_DB_SCHEMA_CHANGE_POC'
 
 # Used to override the default name of the change history table (the default is METADATA.SCHEMACHANGE.CHANGE_HISTORY)
-change-history-table: A1SF_DB_SCHEMA_CHANGE_POC.SCHEMACHANGE.CHANGE_HISTORY
+change-history-table: A1SF_DB_SCHEMA_CHANGE_POC.SCHEMACHANGE.CHANGE_HISTORY_COMMON
 
 # Define values for the variables to replaced in change scripts
 vars:
