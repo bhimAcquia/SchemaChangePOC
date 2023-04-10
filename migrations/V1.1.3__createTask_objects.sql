@@ -1,10 +1,10 @@
 USE SCHEMA DEMO;
-CREATE TABLE input_table(ts timestamp);
+CREATE OR REPLACE TABLE input_table(ts timestamp);
 
-CREATE TASK input_table_task_minute
+CREATE OR REPLACE TASK input_table_task_minute
   WAREHOUSE = A1SF_WH_INTERNAL_ETL_XSMALL
   SCHEDULE = '1 MINUTE'
 AS
 INSERT INTO input_table(ts) VALUES(CURRENT_TIMESTAMP);
 
-ALTER TASK IF EXISTS input_table_task_minute RESUME;
+EXECUTE TASK input_table_task_minute;
