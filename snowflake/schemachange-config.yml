@@ -1,0 +1,47 @@
+config-version: 1
+
+# The root folder for the database change scripts
+root-folder: '/snowflake'
+
+# The modules folder for jinja macros and templates to be used across multiple scripts.
+modules-folder: null
+
+# The name of the snowflake account
+snowflake-account: 'agilonedev.us-east-1'
+
+# The name of the snowflake user
+snowflake-user: 'A1SF_USER_104_PROVISIONER'
+
+# The name of the default role to use. Can be overrideen in the change scripts.
+snowflake-role: 'A1SF_ROLE_104_PROVISIONER'
+
+# The name of the default warehouse to use. Can be overridden in the change scripts.
+snowflake-warehouse: 'A1SF_WH_INTERNAL_ETL_SMALL'
+
+# The name of the default database to use. Can be overridden in the change scripts.
+snowflake-database: 'A1SF_DB_SCHEMA_CHANGE_POC'
+
+# Used to override the default name of the change history table (the default is METADATA.SCHEMACHANGE.CHANGE_HISTORY)
+change-history-table: A1SF_DB_SCHEMA_CHANGE_POC.SCHEMACHANGE.CHANGE_HISTORY
+
+# Define values for the variables to replaced in change scripts
+vars:
+  var1: 'value1'
+  var2: 'value2'
+  secrets:
+    var3: 'value3' # This is considered a secret and will not be displayed in any output
+
+# Create the change history schema and table, if they do not exist (the default is False)
+create-change-history-table: true
+
+# Enable autocommit feature for DML commands (the default is False)
+autocommit: false
+
+# Display verbose debugging details during execution (the default is False)
+verbose: false
+
+# Run schemachange in dry run mode (the default is False)
+dry-run: false
+
+# A string to include in the QUERY_TAG that is attached to every SQL statement executed
+query-tag: 'SCHEMA_CHANGE_POC_QUERY_TAG'
