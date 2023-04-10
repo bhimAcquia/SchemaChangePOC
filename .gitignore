@@ -3,3 +3,6 @@
 .idea/codeStyles/Project.xml
 .idea/sbt.xml
 .idea/vcs.xml
+snowflake/.DS_Store
+snowflake/common/.DS_Store
+snowflake/tenants/.DS_Store
