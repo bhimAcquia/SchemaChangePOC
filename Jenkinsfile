@@ -10,7 +10,7 @@ pipeline {
         stage('Run schemachange') {
             steps {
                 sh "pip install schemachange --upgrade"
-                sh "schemachange -f common "
+                sh "schemachange -f snowflake/common"
             }
         }
     }
