@@ -10,7 +10,7 @@ pipeline {
         stage('Run schemachange') {
             steps {
                 sh "pip install schemachange --upgrade"
-                sh "schemachange -f snowflake/common -c snowflake/schemachange-config.yml"
+                sh "schemachange -f snowflake/common --config-folder snowflake/schemachange-config.yml"
             }
         }
     }
