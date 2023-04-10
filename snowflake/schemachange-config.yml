@@ -38,7 +38,7 @@ create-change-history-table: true
 autocommit: false
 
 # Display verbose debugging details during execution (the default is False)
-verbose: false
+verbose: true
 
 # Run schemachange in dry run mode (the default is False)
 dry-run: false
