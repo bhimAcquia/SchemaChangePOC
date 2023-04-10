@@ -10,7 +10,7 @@ pipeline {
         stage('Run schemachange') {
             steps {
                 sh "pip install schemachange --upgrade"
-                sh "snowchange deploy --include common"
+                sh "snowchange deploy --include /snowflake/common"
             }
         }
     }
